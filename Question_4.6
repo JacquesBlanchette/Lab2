@@ -1,0 +1,76 @@
+#!/bin/bash
+# Question_4.6
+
+
+# Trie les fichiers
+
+if test -d $1
+then
+echo " Les fichiers en odres:"
+ls
+else
+echo " Le document ne contient rien"
+
+fi
+
+# interface
+echo " "
+echo "Que vous voulez faire"
+echo "Copier   fichier,  appuer sur c ou C"
+echo "Deplacer fichier,  appuer sur d ou D"
+echo "Effacer  fichier,  appuer sur e ou E"
+
+
+cp /home{file1,file2}
+
+
+# Lecture du clavier
+echo "Entrez une valeur"
+read -n 1 touche
+echo "    "
+
+# Gestion de la touche
+
+case $touche in
+
+[eE]*)
+echo "effacer"
+;;
+
+[cC]*)
+echo "Copier"
+;;
+
+[dD]*)
+echo "Deplacer"
+;;
+
+[qQ]*)
+echo "Quitter"
+;;
+
+
+
+# Gestion si fichier
+
+if test -f file1
+then
+echo "Mon fichier est un fichier"
+else
+echo "Mon fichier n'est pas un fichier"
+fi
+
+
+
+
+
+
+# gestion de la touche
+if test $touche = a
+then
+echo "Bonjour"
+
+else
+echo "Aurevoir"
+
+fi
